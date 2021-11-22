@@ -154,8 +154,8 @@ project1.getData();
 const project2 = new addProject('Book Store', 'image/zuhair.jpg', 'https://book-store0.netlify.app/', 'https://github.com/ZuhairAhmed0/bookstore');
 project2.getData();
 
-const project3 = new addProject('Rest countries api', 'image/zuhair.png', 'https://rest-countries0.netlify.app/', 'https://github.com/ZuhairAhmed0/restcountries');
-project3.getData();
+// const project3 = new addProject('Rest countries api', 'image/zuhair.png', 'https://rest-countries0.netlify.app/', 'https://github.com/ZuhairAhmed0/restcountries');
+// project3.getData();
 
 const project4 = new addProject('Job Listing', 'image/zuhair.jpg', 'https://jop-listing.netlify.app/', 'https://github.com/ZuhairAhmed0/job-listing-');
 project4.getData();

@@ -48,7 +48,6 @@ header {
   background-color: #0f1024;
   height: 400px;
   position: relative;
-  overflow: hidden;
 }
 header .container .info {
   z-index: 5;
@@ -84,11 +83,21 @@ header .container .info button {
 }
 header .container .img {
   position: absolute;
-  top: 56%;
+  top: 70%;
   transform: translateY(-50%);
   right: 0;
   width: 40%;
   z-index: 2;
+}
+@media (max-width: 768px) {
+  header .container .img {
+    right: 10%;
+  }
+}
+@media (max-width: 468px) {
+  header .container .img {
+    right: 150px;
+  }
 }
 header .container .img img {
   width: 342px;
@@ -271,7 +280,7 @@ header .nav-top {
   gap: 30px 10px;
 }
 .services .content div {
-  width: 300px;
+  width: 49%;
   min-height: 200px;
   background-color: #fff;
   padding: 10px;
@@ -286,13 +295,7 @@ header .nav-top {
 @media (max-width: 760px) {
   .services .content div {
     margin: auto;
-    width: 350px;
-  }
-}
-@media (max-width: 550px) {
-  .services .content div {
     width: 90%;
-    margin: auto;
   }
 }
 .services .content div p {
@@ -468,7 +471,7 @@ header .nav-top {
   position: relative;
 }
 .portfolio .project div.card {
-  width: 300px;
+  width: 49%;
   min-height: 200px;
   background-color: #fff;
   padding: 10px;
@@ -482,13 +485,7 @@ header .nav-top {
 @media (max-width: 760px) {
   .portfolio .project div.card {
     margin: auto;
-    width: 350px;
-  }
-}
-@media (max-width: 550px) {
-  .portfolio .project div.card {
     width: 90%;
-    margin: auto;
   }
 }
 .portfolio .project div.card img,
@@ -588,7 +585,7 @@ header .nav-top {
   padding: 0 0 3rem;
 }
 .contact form {
-  width: 300px;
+  width: 49%;
   min-height: 200px;
   background-color: #fff;
   padding: 10px;
@@ -607,13 +604,7 @@ header .nav-top {
 @media (max-width: 760px) {
   .contact form {
     margin: auto;
-    width: 350px;
-  }
-}
-@media (max-width: 550px) {
-  .contact form {
     width: 90%;
-    margin: auto;
   }
 }
 .contact form label {

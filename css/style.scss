@@ -51,7 +51,7 @@ header {
 	background-color: #0f1024;
 	height: 400px;
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 	.container {
 		.info {
 			z-index: 5;
@@ -88,11 +88,17 @@ header {
 		}
 		.img {
 			position: absolute;
-			top: 56%;
+			top: 70%;
 			transform: translateY(-50%);
 			right: 0;
 			width: 40%;
 			z-index: 2;
+			@media (max-width: 768px) {
+				right: 10%;
+			}
+			@media (max-width: 468px) {
+				right: 150px;
+			}
 			img {
 				width: 342px;
 				height: 340px;
@@ -214,7 +220,7 @@ header {
 	font-size: 2rem;
 }
 @mixin card {
-	width: 300px;
+	width: 49%;
 	min-height: 200px;
 	background-color: #fff;
 	padding: 10px;
@@ -225,12 +231,9 @@ header {
 	box-shadow: 1px 1px 3px 7px #e7f0f6;
 	@media (max-width: 760px) {
 		margin: auto;
-		width: 350px;
-	}
-	@media (max-width: 550px) {
 		width: 90%;
-		margin: auto;
 	}
+	
 }
 @mixin count {
 	position: absolute;
