@@ -228,7 +228,7 @@ function activeOv4(entris) {
 		navbarItem[4].classList.remove('active');
 	}
 }
-const oversvActive4 = new IntersectionObserver(activeOv4, {root: null, threshold: 0.7});
+const oversvActive4 = new IntersectionObserver(activeOv4, {root: null, threshold: .1});
 oversvActive4.observe(portfolio);
 
 function activeOv5(entris) {
