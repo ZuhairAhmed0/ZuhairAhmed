@@ -51,7 +51,7 @@ header {
 	background-color: #0f1024;
 	height: 400px;
 	position: relative;
-	// overflow: hidden;
+	overflow-x: hidden;
 	.container {
 		.info {
 			z-index: 5;
@@ -419,6 +419,7 @@ header {
 		}
 	}
 	$last-text: html css javascript sass bootstrap react;
+
 	@each $text in $last-text {
 		.#{$text} {
 			position: relative;

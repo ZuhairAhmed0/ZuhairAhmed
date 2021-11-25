@@ -48,6 +48,7 @@ header {
   background-color: #0f1024;
   height: 400px;
   position: relative;
+  overflow-x: hidden;
 }
 header .container .info {
   z-index: 5;
