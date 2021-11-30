@@ -97,7 +97,6 @@ header .container .img {
 }
 @media (max-width: 468px) {
   header .container .img {
-    right: 100px;
     top: 80%;
   }
 }
