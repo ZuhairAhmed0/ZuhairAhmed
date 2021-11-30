@@ -94,19 +94,27 @@ header {
 			width: 40%;
 			z-index: 2;
 			@media (max-width: 768px) {
-				right: 10%;
+				right: 15%;
+				
 			}
 			@media (max-width: 468px) {
-				right: 150px;
+				right: 100px;
+				top: 80%;
 			}
 			img {
-				width: 342px;
-				height: 340px;
-				border-radius: 50%;
-				box-shadow: 10px 10px 42px -3px #222;
+				width: 350px;
+				height: 350px;
 				&:hover {
 					transform: scale(1.06);
 					transition: 0.6s;
+				}
+				@media (max-width: 768px) {
+					width: 250px;
+					height: 250px;
+				}
+				@media (max-width: 468px) {
+					width: 200px;
+					height: 200px;
 				}
 			}
 		}
@@ -217,7 +225,7 @@ header {
 @mixin heading {
 	margin: 10px 0;
 	color: $heading-color;
-	font-size: 2rem;
+	font-size: 1.7rem;
 }
 @mixin card {
 	width: 49%;
@@ -233,7 +241,6 @@ header {
 		margin: auto;
 		width: 90%;
 	}
-	
 }
 @mixin count {
 	position: absolute;

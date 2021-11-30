@@ -92,23 +92,34 @@ header .container .img {
 }
 @media (max-width: 768px) {
   header .container .img {
-    right: 10%;
+    right: 15%;
   }
 }
 @media (max-width: 468px) {
   header .container .img {
-    right: 150px;
+    right: 100px;
+    top: 80%;
   }
 }
 header .container .img img {
-  width: 342px;
-  height: 340px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 42px -3px #222;
+  width: 350px;
+  height: 350px;
 }
 header .container .img img:hover {
   transform: scale(1.06);
   transition: 0.6s;
+}
+@media (max-width: 768px) {
+  header .container .img img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 468px) {
+  header .container .img img {
+    width: 200px;
+    height: 200px;
+  }
 }
 header .nav-top {
   background-color: #0f1024;
@@ -223,7 +234,7 @@ header .nav-top {
 .about h2 {
   margin: 10px 0;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .about p {
   max-width: 700px;
@@ -270,7 +281,7 @@ header .nav-top {
 .services h2 {
   margin: 10px 0;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 2rem;
 }
 .services .content {
@@ -366,7 +377,7 @@ header .nav-top {
 .skills h2 {
   margin: 10px 0;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .skills .container .skill {
   display: flex;
@@ -460,7 +471,7 @@ header .nav-top {
 .portfolio h2 {
   margin: 10px 0;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 2rem;
 }
 .portfolio .project {
@@ -665,7 +676,7 @@ header .nav-top {
 .Call h2 {
   margin: 10px 0;
   color: #222;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .Call a {
   text-decoration: none;
