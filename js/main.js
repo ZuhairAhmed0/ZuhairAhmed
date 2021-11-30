@@ -12,19 +12,19 @@ const navbarItem = document.querySelectorAll('.navbar ul li');
 const logo = document.querySelector('.logo');
 const projectsContainer = document.querySelector('.project');
 const thisYear = document.getElementById('thisYear');
+const thisAge = document.getElementById('age');
 const contentMe = document.getElementById('contentMe');
 const myNameIs = document.querySelector('.info h3');
 myNameIs.textContent = '';
 let myName = [...'Zuhair Ahmed'];
 let x = 0;
 
-
 setInterval(() => {
-	if(x != myName.length) {
+	if (x != myName.length) {
 		myNameIs.textContent += myName[x];
 		x++;
 	}
-}, 200 * (x+1));
+}, 200 * (x + 1));
 
 class Progress {
 	static speed = 50;
@@ -175,7 +175,6 @@ project8.getData();
 const project9 = new addProject('Memory Game', 'image/zuhair.png', 'https://memory-gameel.netlify.app/', 'https://github.com/ZuhairAhmed0/memory-game');
 project9.getData();
 
-
 function activeOv0(entris) {
 	const [entry] = entris;
 	if (entry.isIntersecting) {
@@ -228,7 +227,7 @@ function activeOv4(entris) {
 		navbarItem[4].classList.remove('active');
 	}
 }
-const oversvActive4 = new IntersectionObserver(activeOv4, {root: null, threshold: .1});
+const oversvActive4 = new IntersectionObserver(activeOv4, {root: null, threshold: 0.1});
 oversvActive4.observe(portfolio);
 
 function activeOv5(entris) {
@@ -244,3 +243,24 @@ oversvActive5.observe(contact);
 
 // thisYear
 thisYear.textContent = new Date().getFullYear();
+thisAge.textContent = new Date().getFullYear() - 2002;
+
+function sendMail() {
+	// body...
+	let Table = {
+		Name: document.getElementById('Name').value,
+		email: document.getElementById('email').value,
+		phone: document.getElementById('phone').value,
+		message: document.getElementById('message').value,
+	};
+	if (Table.Name && Table.email && Table.message && Table.message) {
+		emailjs.send('email', 'template_1', Table);
+
+		document.querySelectorAll('label + input').forEach((d) => (d.value = ' '));
+		document.getElementById('message').value = 'تم ارسال الرسالة بنجاح';
+	}
+}
+document.querySelector('#send').addEventListener('click', (e) => {
+	e.preventDefault();
+	sendMail();
+});
