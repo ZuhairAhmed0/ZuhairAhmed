@@ -95,10 +95,8 @@ header {
 			z-index: 2;
 			@media (max-width: 768px) {
 				right: 15%;
-				
 			}
 			@media (max-width: 468px) {
-				
 				top: 80%;
 			}
 			img {
@@ -466,8 +464,8 @@ header {
 				z-index: 1;
 			}
 			.text {
-				background-color: rgba(0, 0, 0, 0.4);
-				background-image: linear-gradient(to bottom, rgba(209, 201, 201, 0.3), rgba(209, 201, 201, 0.4), rgba(209, 201, 201, 0.5), rgba(208, 200, 200, 0.7));
+				background-color: rgba(0, 0, 0, 0.1);
+				background-image: linear-gradient(to bottom, rgba(209, 201, 201, 0.1), rgba(209, 201, 201, 0.1), rgba(209, 201, 201, 0.1), rgba(208, 200, 200, 0.1));
 				z-index: 3;
 			}
 			span {
@@ -478,7 +476,10 @@ header {
 				color: #fff;
 				font-weight: bold;
 				letter-spacing: 3px;
+				margin: 0 auto;
 				margin-top: 100px;
+				background: #8381818c;
+				width: fit-content;
 			}
 			div.overlay {
 				position: absolute;

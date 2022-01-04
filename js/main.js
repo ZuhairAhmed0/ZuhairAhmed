@@ -148,31 +148,31 @@ class addProject {
 	}
 }
 
-const project1 = new addProject('Flavour Food', 'image/zuhair.png', 'https://flavour-food.netlify.app/', 'https://github.com/ZuhairAhmed0/flavour-food');
+const project1 = new addProject('Flavour Food', 'image/project_1.png', 'https://flavour-food.netlify.app/', 'https://github.com/ZuhairAhmed0/flavour-food');
 project1.getData();
 
-const project2 = new addProject('Book Store', 'image/zuhair.jpg', 'https://book-store0.netlify.app/', 'https://github.com/ZuhairAhmed0/bookstore');
+const project2 = new addProject('Book Store', 'image/project_2.png', 'https://book-store0.netlify.app/', 'https://github.com/ZuhairAhmed0/bookstore');
 project2.getData();
 
 // const project3 = new addProject('Rest countries api', 'image/zuhair.png', 'https://rest-countries0.netlify.app/', 'https://github.com/ZuhairAhmed0/restcountries');
 // project3.getData();
 
-const project4 = new addProject('Job Listing', 'image/zuhair.jpg', 'https://jop-listing.netlify.app/', 'https://github.com/ZuhairAhmed0/job-listing-');
+const project4 = new addProject('Job Listing', 'image/project_3.png', 'https://jop-listing.netlify.app/', 'https://github.com/ZuhairAhmed0/job-listing-');
 project4.getData();
 
-const project5 = new addProject('Ecommerce', 'image/zuhair.png', 'https://e-commercee0.netlify.app/', 'https://github.com/ZuhairAhmed0/eBay');
+const project5 = new addProject('Ecommerce', 'image/project_4.png', 'https://e-commercee0.netlify.app/', 'https://github.com/ZuhairAhmed0/eBay');
 project5.getData();
 
-const project6 = new addProject('To do list', 'image/zuhair.jpg', 'https://to-do-list9.netlify.app/', 'https://github.com/ZuhairAhmed0/to-do-list');
+const project6 = new addProject('To do list', 'image/project_5.png', 'https://to-do-list9.netlify.app/', 'https://github.com/ZuhairAhmed0/to-do-list');
 project6.getData();
 
-const project7 = new addProject('App Simple Note', 'image/zuhair.jpg', 'https://app-simple-note.netlify.app/', 'https://github.com/ZuhairAhmed0/app-simple-note');
+const project7 = new addProject('App Simple Note', 'image/project_6.png', 'https://app-simple-note.netlify.app/', 'https://github.com/ZuhairAhmed0/app-simple-note');
 project7.getData();
 
-const project8 = new addProject('URL shortening', 'image/zuhair.jpg', 'https://url-shortening0.netlify.app/', 'https://github.com/ZuhairAhmed0/url-shortening');
+const project8 = new addProject('URL shortening', 'image/project_7.png', 'https://url-shortening0.netlify.app/', 'https://github.com/ZuhairAhmed0/url-shortening');
 project8.getData();
 
-const project9 = new addProject('Memory Game', 'image/zuhair.png', 'https://memory-gameel.netlify.app/', 'https://github.com/ZuhairAhmed0/memory-game');
+const project9 = new addProject('Memory Game', 'image/project_8.png', 'https://memory-gameel.netlify.app/', 'https://github.com/ZuhairAhmed0/memory-game');
 project9.getData();
 
 function activeOv0(entris) {
@@ -255,7 +255,7 @@ function sendMail() {
 	};
 	if (Table.Name && Table.email && Table.message && Table.message) {
 		emailjs.send('email', 'template_1', Table);
-
+		console.log(Table);
 		document.querySelectorAll('label + input').forEach((d) => (d.value = ' '));
 		document.getElementById('message').value = 'تم ارسال الرسالة بنجاح';
 	}

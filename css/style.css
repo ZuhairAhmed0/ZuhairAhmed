@@ -509,8 +509,8 @@ header .nav-top {
   z-index: 1;
 }
 .portfolio .project div.card .text {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(to bottom, rgba(209, 201, 201, 0.3), rgba(209, 201, 201, 0.4), rgba(209, 201, 201, 0.5), rgba(208, 200, 200, 0.7));
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom, rgba(209, 201, 201, 0.1), rgba(209, 201, 201, 0.1), rgba(209, 201, 201, 0.1), rgba(208, 200, 200, 0.1));
   z-index: 3;
 }
 .portfolio .project div.card span {
@@ -534,7 +534,10 @@ header .nav-top {
   color: #fff;
   font-weight: bold;
   letter-spacing: 3px;
+  margin: 0 auto;
   margin-top: 100px;
+  background: #8381818c;
+  width: fit-content;
 }
 .portfolio .project div.card div.overlay {
   position: absolute;
