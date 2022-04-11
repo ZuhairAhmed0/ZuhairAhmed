@@ -72,7 +72,7 @@ const oversvskills = new IntersectionObserver(skillsOv, {
 oversvskills.observe(skills);
 */
 logo.addEventListener('click', () => {
-	location.assgin('/');
+	location.assign('/');
 });
 
 function showNavbar() {
