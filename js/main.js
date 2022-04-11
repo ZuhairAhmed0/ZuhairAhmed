@@ -1,9 +1,9 @@
-let progressBar = document.querySelectorAll('.skills .round');
-let valueCount = document.querySelectorAll('.skills .value-count');
+// let progressBar = document.querySelectorAll('.skills .round');
+// let valueCount = document.querySelectorAll('.skills .value-count');
 const header = document.querySelector('header');
 const about = document.querySelector('.about');
 const services = document.querySelector('.services');
-const skills = document.querySelector('.skills');
+// const skills = document.querySelector('.skills');
 const portfolio = document.querySelector('.portfolio');
 const contact = document.querySelector('.contact');
 const home = document.querySelector('.bars');
@@ -25,7 +25,7 @@ setInterval(() => {
 		x++;
 	}
 }, 200 * (x + 1));
-
+/*
 class Progress {
 	static speed = 50;
 	constructor(progressValue, progressEndValue, el, count) {
@@ -70,9 +70,9 @@ const oversvskills = new IntersectionObserver(skillsOv, {
 	threshold: 0.1,
 });
 oversvskills.observe(skills);
-
+*/
 logo.addEventListener('click', () => {
-	location.replace('index.html');
+	location.assgin('/');
 });
 
 function showNavbar() {
