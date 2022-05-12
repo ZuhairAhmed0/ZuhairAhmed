@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة الرئسية</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="vendor/aos/aos.css" />
+</head>
+
+<body>
+    <header class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h2 class="logo">Z</h2>
+                <div class="bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li onclick="location.assign('/')">Home</li>
+                    <li onclick="location.assign('/')">About</li>
+                    <li onclick="location.assign('/')">Services</li>
+                    <li onclick="location.assign('/')">Skills</li>
+                    <li onclick="location.assign('/')">Portfolio</li>
+                    <li onclick="location.assign('/')">Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="info">
+                <samp><span>Hello</span>, my name is</samp>
+                <h3>Zuhir Ahmed</h3>
+                <span>I'm Web Developer</span>
+                <button id="contentMe">content Me</button>
+            </div>
+            <div class="img">
+                <!--<img src="image/zuhair.png" alt="" />-->
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="portfolio">
+            <div class="container">
+                <div class="details">
+
+                    
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container" data-aos="fade-up">
+            <div>
+                <a href="https://twitter.com/Zuhair_Ahmed0">
+                    <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zuhair-ahmed-8736b0227/">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://github.com/ZuhairAhmed0">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://wa.me/0997313128">
+                    <i class="bx bxl-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/Zuhair.dev">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="https://t.me/ZUH67">
+                    <i class="bx bxl-telegram"></i>
+                </a>
+            </div>
+            <p>Copyright &copy; Zuhair 2021 - <date id="thisYear"></date>
+            </p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/details.js" ></script>
+
+    <script src="vendor/aos/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_I8rsv9m27ZdDqywl4TAoJ");
+        })();
+    </script>
+</body>
+
+</html>
