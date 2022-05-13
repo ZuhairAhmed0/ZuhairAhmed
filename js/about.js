@@ -4,7 +4,6 @@ const about_url = "https://zuhair-api.herokuapp.com/api/about-me";
 async function getResponse() {
   const response = await fetch(about_url, {
     method: "GET",
-    mode: 'no-cors',
   });
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
