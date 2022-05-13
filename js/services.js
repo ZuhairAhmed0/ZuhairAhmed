@@ -1,5 +1,5 @@
 const servicesContainer = document.querySelector(".services .content");
-const services_url = "http://localhost:3000/api/services";
+const services_url = "https://zuhair-api.herokuapp.com/api/services";
 
 async function getResponse() {
   const response = await fetch(services_url, {

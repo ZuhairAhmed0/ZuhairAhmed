@@ -1,5 +1,5 @@
 const projectsContainer = document.querySelector(".project");
-const url = "http://localhost:3000/api";
+const url = "https://zuhair-api.herokuapp.com/api";
 let count = 0;
 
 async function getResponse() {

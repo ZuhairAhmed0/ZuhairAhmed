@@ -1,5 +1,5 @@
 const detailsContainer = document.querySelector(".details");
-const details_url = `http://localhost:3000/api/projects/${location.search.slice(
+const details_url = `https://zuhair-api.herokuapp.com/api/projects/${location.search.slice(
   1
 )}`;
 

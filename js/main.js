@@ -185,7 +185,7 @@ sendToEmail.addEventListener("submit", (e) => {
     message = sendToEmail.message.value;
 
   async function sendData() {
-    const response = await fetch(`http://localhost:3000/api/sendToEmail`, {
+    const response = await fetch(`https://zuhair-api.herokuapp.com/api/sendToEmail`, {
       method: "POST",
       headers: {
         "Content-Type": "Application/json",

@@ -1,5 +1,5 @@
 const skillsContainer = document.querySelector(".skills .skill");
-const skills_url = "http://localhost:3000/api/skills";
+const skills_url = "https://zuhair-api.herokuapp.com/api/skills";
 
 async function getResponse() {
   const response = await fetch(skills_url, {

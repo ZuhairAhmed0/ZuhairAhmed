@@ -7,6 +7,7 @@
 
 body {
   background-color: #ebf4fa;
+  color: #000;
 }
 
 html {
@@ -265,12 +266,12 @@ textarea {
   gap: 20px;
 }
 .about .info td {
-  color: #555;
+  color: #333;
   font-size: 14px;
 }
 .about .info td strong {
   margin-right: 8px;
-  color: #333;
+  color: #222;
 }
 
 .translate {
@@ -371,7 +372,7 @@ textarea {
   color: #f95353;
   font-size: 1.4rem;
   margin: 5px 0;
-  color: #666;
+  color: #222;
 }
 
 .skills {
@@ -685,7 +686,7 @@ textarea {
 }
 .comments .comment-content .comment-img i {
   font-size: 3rem;
-  color: #555;
+  color: #333;
 }
 .comments .comment-content .comment-info {
   width: calc(100% - 70px);
@@ -716,7 +717,7 @@ textarea {
   border-radius: 0;
   margin: 10px auto !important;
   min-height: auto;
-  color: #777;
+  color: #333;
   line-height: 1.6;
 }
 @media (max-width: 760px) {
@@ -769,7 +770,7 @@ textarea {
 }
 .contact form label {
   display: block;
-  color: #888;
+  color: #333;
 }
 .contact form div:first-of-type {
   width: 100%;
@@ -859,7 +860,7 @@ footer .container {
 }
 footer p {
   margin-top: 20px;
-  color: #ebf4fa;
+  color: #fdfdfd;
 }
 footer a {
   color: #fff;

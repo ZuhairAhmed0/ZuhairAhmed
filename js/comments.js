@@ -1,5 +1,5 @@
 const commentContainer = document.querySelector(".comment");
-const comments_url = "http://localhost:3000/api";
+const comments_url = "https://zuhair-api.herokuapp.com/api";
 let countComments = document.querySelector(".count-comments");
 const formComment = document.querySelector(".form-comment");
 
