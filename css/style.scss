@@ -512,11 +512,14 @@ textarea {
         height: 450px;
       }
       .text {
-        height: 80px;
-        flex-wrap: wrap;
+        height: 100px; 
+        .project-name {
+          flex-wrap: wrap;
+
+        }
       }
       img {
-        height: calc( 100% - 80px );
+        height: calc( 100% - 100px );
       }
     }
     .description {

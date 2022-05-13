@@ -579,11 +579,13 @@ textarea {
   }
 }
 .portfolio .details div.card .text {
-  height: 80px;
+  height: 100px;
+}
+.portfolio .details div.card .text .project-name {
   flex-wrap: wrap;
 }
 .portfolio .details div.card img {
-  height: calc(100% - 80px);
+  height: calc(100% - 100px);
 }
 .portfolio .details .description {
   width: 49%;

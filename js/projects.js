@@ -1,11 +1,11 @@
 const projectsContainer = document.querySelector(".project");
-const url = "https://zuhair-api.herokuapp.com/api";
+const url = "http://localhost:3000/api";
 let count = 0;
 
 async function getResponse() {
   const response = await fetch(`${url}/projects`, {
     method: "GET",
-
+    
   });
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
