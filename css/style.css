@@ -575,7 +575,7 @@ textarea {
 }
 @media (max-width: 468px) {
   .portfolio .details div.card {
-    height: auto;
+    height: 450px;
   }
 }
 .portfolio .details div.card .text {
