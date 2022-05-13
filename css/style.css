@@ -575,7 +575,7 @@ textarea {
 }
 @media (max-width: 468px) {
   .portfolio .details div.card {
-    height: 450px;
+    height: auto;
   }
 }
 .portfolio .details div.card .text {
@@ -599,11 +599,17 @@ textarea {
   box-shadow: 1px 1px 3px 7px #e7f0f6;
   padding: 20px;
   height: 300px;
+  width: 100%;
 }
 @media (max-width: 760px) {
   .portfolio .details .description {
     margin: auto;
     width: 90%;
+  }
+}
+@media (max-width: 468px) {
+  .portfolio .details .description {
+    height: auto;
   }
 }
 .portfolio .details a {
