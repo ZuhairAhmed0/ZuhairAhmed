@@ -573,11 +573,17 @@ textarea {
   height: 400px;
   width: 100%;
 }
+@media (max-width: 468px) {
+  .portfolio .details div.card {
+    height: 450px;
+  }
+}
 .portfolio .details div.card .text {
-  height: 15%;
+  height: 80px;
+  flex-wrap: wrap;
 }
 .portfolio .details div.card img {
-  height: 85%;
+  height: calc(100% - 80px);
 }
 .portfolio .details .description {
   width: 49%;

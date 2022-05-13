@@ -450,6 +450,7 @@ textarea {
     div.card {
       @include card();
       height: 330px;
+      
       img,
       .text {
         width: 100%;
@@ -507,11 +508,15 @@ textarea {
     div.card {
       height: 400px;
       width: 100%;
+      @media (max-width: 468px) {
+        height: 450px;
+      }
       .text {
-        height: 15%;
+        height: 80px;
+        flex-wrap: wrap;
       }
       img {
-        height: 85%;
+        height: calc( 100% - 80px );
       }
     }
     .description {
