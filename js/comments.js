@@ -1,19 +1,8 @@
+import getResponse from './getResponse.js';
+
 const commentContainer = document.querySelector(".comment");
-// const comments_url = "https://zuhair-api.herokuapp.com/api";
-const comments_url = "http://localhost:3000/api";
 let countComments = document.querySelector(".count-comments");
 const formComment = document.querySelector(".form-comment");
-
-async function getResponse() {
-  const response = await fetch(`${comments_url}/comments`, {
-    method: "GET",
-  });
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data = await response.json();
-  return data;
-}
 
 function getDate(times) {
   let date = new Date(times);
@@ -30,7 +19,7 @@ function getDate(times) {
 
 function showComments() {
   commentContainer.innerHTML = '';
-  getResponse()
+  getResponse("comments")
     .then(({ comments }) => {
       
       countComments.textContent = ` (${comments.length})`;

@@ -1,17 +1,8 @@
+import getResponse from './getResponse.js';
+
 const skillsContainer = document.querySelector(".skills .skill");
-// const skills_url = "https://zuhair-api.herokuapp.com/api/skills";
-const skills_url = "http://localhost:3000/api/skills"
-async function getResponse() {
-  const response = await fetch(skills_url, {
-    method: "GET",
-  });
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data = await response.json();
-  return data;
-}
-getResponse()
+
+getResponse("skills")
   .then(({ skills }) => {
     skills.forEach(({name, source, icon}) => {
       let html = `

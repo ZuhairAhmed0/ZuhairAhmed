@@ -15,6 +15,7 @@ const myNameIs = document.querySelector(".info h3");
 const sendToEmail = document.querySelector(".sendToEmail");
 const sendSuccessfully = document.querySelector(".send-successfully");
 const toUp = document.querySelector(".toUp");
+
 myNameIs.textContent = "";
 let myName = [..."Zuhair Ahmed"];
 let x = 0;
@@ -86,7 +87,7 @@ navbarItem.forEach((li) => {
     });
   });
 });
-contentMe.addEventListener("click", () =>
+contentMe?.addEventListener("click", () =>
   contact.scrollIntoView({ behavior: "smooth" })
 );
 
@@ -177,6 +178,7 @@ oversvActive5.observe(contact);
 // thisYear
 thisYear.textContent = new Date().getFullYear();
 
+
 sendToEmail.addEventListener("submit", (e) => {
   e.preventDefault();
   const username = sendToEmail.name.value,
@@ -185,8 +187,6 @@ sendToEmail.addEventListener("submit", (e) => {
     message = sendToEmail.message.value;
 
   async function sendData() {
-    // https://zuhair-api.herokuapp.com/api
-    
     const response = await fetch(`http://localhost:3000/api/sendToEmail`, {
       method: "POST",
       headers: {
@@ -203,10 +203,8 @@ sendToEmail.addEventListener("submit", (e) => {
 
   sendData()
     .then((result) => {
-      sendToEmail.name.value = "";
-      sendToEmail.email.value = "";
-      sendToEmail.phone.value = "";
-      sendToEmail.message.value = "";
+      sendToEmail.querySelectorAll('input').forEach(i => i.value = '')
+      sendToEmail.message.value = '';
       sendSuccessfully.textContent = result;
       setTimeout(() => {
         sendSuccessfully.textContent = "";

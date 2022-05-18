@@ -1,18 +1,7 @@
+import getResponse from './getResponse.js';
 const aboutContainer = document.querySelector(".about .container");
-// const about_url = "https://zuhair-api.herokuapp.com/api/about-me";
-const about_url = "http://localhost:3000/api/about-me";
 
-async function getResponse() {
-  const response = await fetch(about_url, {
-    method: "GET",
-  });
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data = await response.json();
-  return data;
-}
-getResponse()
+getResponse("about-me")
   .then(({ info }) => {
     const keys = info.moreInfo.map((more) => Object.keys(more)).flat();
     const values = info.moreInfo.map((more) => Object.values(more)).flat();

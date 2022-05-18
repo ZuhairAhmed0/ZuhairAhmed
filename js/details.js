@@ -1,23 +1,10 @@
+import getResponse from './getResponse.js';
+
 const detailsContainer = document.querySelector(".details");
-// const details_url = `https://zuhair-api.herokuapp.com/api/projects/${location.search.slice(
-//   1
-// )}`;
-const details_url = `http://localhost:3000/api/projects/${location.search.slice(
-  1
-)}`;
 function showDetails() {
   let liked = "bx-like";
-  async function getResponse() {
-    const response = await fetch(details_url, {
-      method: "GET",
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  }
-  getResponse()
+ 
+  getResponse(`projects/${location.search.slice(1)}`)
     .then(({ project }) => {
       const html = `<div class="card" data-aos="fade-up" data-aos-delay="100">
           <img src="${project.imgSrc}" alt="">

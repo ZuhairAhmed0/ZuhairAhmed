@@ -1,22 +1,10 @@
+import getResponse from './getResponse.js';
+
 const projectsContainer = document.querySelector(".project");
-// const url = "https://zuhair-api.herokuapp.com/api";
-const projects_url = "http://localhost:3000/api"
 let count = 0;
 
-async function getResponse() {
-  const response = await fetch(`${projects_url}/projects`, {
-    method: "GET",
-    
-  });
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data = await response.json();
-  return data;
-}
-
 function showProjects(){
-  getResponse()
+  getResponse("projects")
   .then(({ projects }) => {
     projects.forEach((project, i) => {
       const html = `<div class="card" data-aos="fade-up" data-aos-delay="${

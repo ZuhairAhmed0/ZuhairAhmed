@@ -1,17 +1,7 @@
+import getResponse from './getResponse.js';
+
 const servicesContainer = document.querySelector(".services .content");
-// const services_url = "https://zuhair-api.herokuapp.com/api/services";
-const services_url = "http://localhost:3000/api/services";
-async function getResponse() {
-  const response = await fetch(services_url, {
-    method: "GET",
-  });
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data = await response.json();
-  return data;
-}
-getResponse()
+getResponse("services")
   .then(({ services }) => {
     services.forEach((service) => {
       let html = `<div data-aos="fade-up" data-aos-delay="100">
