@@ -1,5 +1,6 @@
 const commentContainer = document.querySelector(".comment");
-const comments_url = "https://zuhair-api.herokuapp.com/api";
+// const comments_url = "https://zuhair-api.herokuapp.com/api";
+const comments_url = "http://localhost:3000/api";
 let countComments = document.querySelector(".count-comments");
 const formComment = document.querySelector(".form-comment");
 
@@ -31,6 +32,7 @@ function showComments() {
   commentContainer.innerHTML = '';
   getResponse()
     .then(({ comments }) => {
+      
       countComments.textContent = ` (${comments.length})`;
 
       comments.forEach((comment) => {
@@ -83,9 +85,9 @@ function showComments() {
             const data = await response.json();
             return data;
           }
-
           deleteComment()
-            .then((result) => {
+            .then(({comment}) => {
+              localStorage.removeItem(`commented-${comment._id}`)
               showComments();
             })
             .catch((error) => {

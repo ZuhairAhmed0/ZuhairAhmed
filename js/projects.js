@@ -1,9 +1,10 @@
 const projectsContainer = document.querySelector(".project");
-const url = "https://zuhair-api.herokuapp.com/api";
+// const url = "https://zuhair-api.herokuapp.com/api";
+const projects_url = "http://localhost:3000/api"
 let count = 0;
 
 async function getResponse() {
-  const response = await fetch(`${url}/projects`, {
+  const response = await fetch(`${projects_url}/projects`, {
     method: "GET",
     
   });
@@ -49,12 +50,7 @@ function showProjects(){
   });
 }
 
-
-
 showProjects();
-
-
-
 
 function liked(bxLike) {
   bxLike.forEach((i) => {
@@ -66,7 +62,7 @@ function liked(bxLike) {
     i.addEventListener("click", (e) => {
       let id = e.target.dataset.id;
       async function incrementLikes(check) {
-        const response = await fetch(`${url}/likes`, {
+        const response = await fetch(`${projects_url}/likes`, {
           method: "Put",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({id, increment: check}),
@@ -97,7 +93,6 @@ function liked(bxLike) {
       }
     });
   });
-
 } 
 
 

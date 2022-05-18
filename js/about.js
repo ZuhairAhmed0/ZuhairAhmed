@@ -1,5 +1,6 @@
 const aboutContainer = document.querySelector(".about .container");
-const about_url = "https://zuhair-api.herokuapp.com/api/about-me";
+// const about_url = "https://zuhair-api.herokuapp.com/api/about-me";
+const about_url = "http://localhost:3000/api/about-me";
 
 async function getResponse() {
   const response = await fetch(about_url, {
