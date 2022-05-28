@@ -1,14 +1,13 @@
 import getResponse from './getResponse.js';
 const aboutContainer = document.querySelector(".about .container");
-
-getResponse("about-me")
-  .then(({ info }) => {
-    const keys = info.moreInfo.map((more) => Object.keys(more)).flat();
-    const values = info.moreInfo.map((more) => Object.values(more)).flat();
+getResponse('./data/aboutmes.json')
+  .then((info) => {
+    const keys = info[0].moreInfo.map((more) => Object.keys(more)).flat();
+    const values = info[0].moreInfo.map((more) => Object.values(more)).flat();
 
     let html = `<div> 
         <p>
-            ${info.info}
+            ${info[0].info}
         </p>
         <table class="info">`;
 

@@ -1,0 +1,56 @@
+[{
+  "_id": "62795b01910222559086f259",
+  "name": "Html5",
+  "source": "https://www.w3.org/html/",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f25a",
+  "name": "Css3",
+  "source": "https://www.w3schools.com/css/",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f25b",
+  "name": "Javascript",
+  "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+},{
+  "_id": "62795b01910222559086f25c",
+  "name": "Bootstrap",
+  "source": "https://getbootstrap.com",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f25d",
+  "name": "Sass",
+  "source": "https://sass-lang.com",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+},{
+  "_id": "62795b01910222559086f25e",
+  "name": "Nodejs",
+  "source": "https://nodejs.org",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f25f",
+  "name": "Java",
+  "source": "https://www.java.com",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+},{
+  "_id": "62795b01910222559086f260",
+  "name": "Mongodb",
+  "source": "https://www.mongodb.com/",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f261",
+  "name": "Mysql",
+  "source": "https://www.mysql.com/",
+  "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+},{
+  "_id": "62795b01910222559086f262",
+  "name": "Git",
+  "source": "https://git-scm.com/",
+  "icon": "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
+},{
+  "_id": "62795b01910222559086f263",
+  "name": "Adobe Xd",
+  "source": "https://www.adobe.com/products/xd.html",
+  "icon": "https://cdn.worldvectorlogo.com/logos/adobe-xd.svg"
+}]

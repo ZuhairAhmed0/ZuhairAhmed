@@ -1,15 +1,15 @@
-import getResponse from './getResponse.js';
+import getResponse from "./getResponse.js";
 
 const projectsContainer = document.querySelector(".project");
 let count = 0;
 
-function showProjects(){
-  getResponse("projects")
-  .then(({ projects }) => {
-    projects.forEach((project, i) => {
-      const html = `<div class="card" data-aos="fade-up" data-aos-delay="${
-        i + 1 * 100
-      }">
+function showProjects() {
+  getResponse("./data/projects.json")
+    .then((projects) => {
+      projects.forEach((project, i) => {
+        const html = `<div class="card" data-aos="fade-up" data-aos-delay="${
+          i + 1 * 100
+        }">
 				<img src="${project.imgSrc}" alt="">
 				<div class="text">
 					<span>${i + 1}</span>
@@ -26,16 +26,15 @@ function showProjects(){
 					</div>
 				</div>
 			</div>`;
-      projectsContainer?.insertAdjacentHTML("beforeend", html);
-    });
+        projectsContainer?.insertAdjacentHTML("beforeend", html);
+      });
 
-    const bxLike = document.querySelectorAll(".likes");
-    liked(bxLike);
-    
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+      const bxLike = document.querySelectorAll(".likes");
+      liked(bxLike);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 showProjects();
@@ -43,44 +42,19 @@ showProjects();
 function liked(bxLike) {
   bxLike.forEach((i) => {
     let id = i.dataset.id;
-    if(localStorage.getItem(`liked-${id}`)) {
-      i.classList.replace('bx-like', 'bxs-like')
+    if (localStorage.getItem(`liked-${id}`)) {
+      i.classList.replace("bx-like", "bxs-like");
     }
-
     i.addEventListener("click", (e) => {
-      let id = e.target.dataset.id;
-      async function incrementLikes(check) {
-        const response = await fetch(`${projects_url}/likes`, {
-          method: "Put",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({id, increment: check}),
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-      }
-
-      if(localStorage.getItem(`liked-${id}`)) {
-        incrementLikes(false).then(({incrementLike:result}) => {
-          localStorage.removeItem(`liked-${id}`);
-          e.target.classList.replace('bxs-like', 'bx-like')
-          e.target.innerHTML = `<samp style="width: 30px">${result-1}</samp>`
-        }).catch((error) => {
-          console.log(error);
-        });
+      if (localStorage.getItem(`liked-${id}`)) {
+        localStorage.removeItem(`liked-${id}`);
+        e.target.classList.replace("bxs-like", "bx-like");
+        e.target.innerHTML = `<samp style="width: 30px">${0}</samp>`;
       } else {
-        incrementLikes(true).then(({incrementLike:result}) => {
-          localStorage.setItem(`liked-${id}`, id);
-          e.target.classList.replace('bx-like', 'bxs-like')
-          e.target.innerHTML = `<samp style="width: 30px">${+result+1}</samp>`
-        }).catch((error) => {
-          console.log(error);
-        });
+        localStorage.setItem(`liked-${id}`, id);
+        e.target.classList.replace("bx-like", "bxs-like");
+        e.target.innerHTML = `<samp style="width: 30px">${1}</samp>`;
       }
     });
   });
-} 
-
-
+}

@@ -4,8 +4,12 @@ const detailsContainer = document.querySelector(".details");
 function showDetails() {
   let liked = "bx-like";
  
-  getResponse(`projects/${location.search.slice(1)}`)
-    .then(({ project }) => {
+  getResponse("../data/projects.json")
+    .then((projects) => {
+      const id = location.search.slice(1);
+      console.log(id);
+      const targerProject = projects.filter(project => project._id === id)
+      const project = targerProject[0];
       const html = `<div class="card" data-aos="fade-up" data-aos-delay="100">
           <img src="${project.imgSrc}" alt="">
           <div class="text">
@@ -27,10 +31,10 @@ function showDetails() {
           
               `;
       detailsContainer?.insertAdjacentHTML("afterbegin", html);
-      let id = document.querySelector(".likes");
-      localStorage.getItem(`liked-${id.dataset.id}`)
-        ? id.classList.replace("bx-like", "bxs-like")
-        : id.classList.replace("bxs-like", "bx-like");
+      let likes = document.querySelector(".likes");
+      localStorage.getItem(`liked-${likes.dataset.id}`)
+        ? likes.classList.replace("bx-like", "bxs-like")
+        : likes.classList.replace("bxs-like", "bx-like");
     })
     .catch((error) => {
       console.log(error);

@@ -2,8 +2,8 @@ import getResponse from './getResponse.js';
 
 const skillsContainer = document.querySelector(".skills .skill");
 
-getResponse("skills")
-  .then(({ skills }) => {
+getResponse("./data/skills.json")
+  .then((skills) => {
     skills.forEach(({name, source, icon}) => {
       let html = `
         <a href="${source}" target="_blank" rel="noreferrer">
@@ -11,7 +11,6 @@ getResponse("skills")
               alt="${name}" width="50" height="50" />
         </a>
       `;
-
     skillsContainer?.insertAdjacentHTML("beforeend", html);
     });
   })

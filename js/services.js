@@ -1,8 +1,8 @@
 import getResponse from './getResponse.js';
 
 const servicesContainer = document.querySelector(".services .content");
-getResponse("services")
-  .then(({ services }) => {
+getResponse("./data/services.json")
+  .then((services) => {
     services.forEach((service) => {
       let html = `<div data-aos="fade-up" data-aos-delay="100">
         <i class="bx ${service.icon}"></i>
@@ -12,7 +12,6 @@ getResponse("services")
         </p>
         <a>Read More</a>
     </div>`;
-
       servicesContainer?.insertAdjacentHTML("beforeend", html);
     });
   })

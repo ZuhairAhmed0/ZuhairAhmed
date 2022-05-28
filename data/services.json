@@ -1,0 +1,21 @@
+[{
+  "_id": "62791ca83c59bb9ba848ca75",
+  "name": "Front end developer",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem quisquam possimus eos reiciendis exercitationem veniam, rerum labore fuga esse.",
+  "icon": "bx-desktop"
+},{
+  "_id": "62791c6f3c59bb9ba848ca71",
+  "name": "back end developer",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem quisquam possimus eos reiciendis exercitationem veniam, rerum labore fuga esse.",
+  "icon": "bx-server"
+},{
+  "_id": "62791c943c59bb9ba848ca73",
+  "name": "Responsive Web Design",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem quisquam possimus eos reiciendis exercitationem veniam, rerum labore fuga esse.",
+  "icon": "bx-mobile"
+},{
+  "_id": "62791c4c3c59bb9ba848ca6f",
+  "name": "Security/SEO",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quidem quisquam possimus eos reiciendis exercitationem veniam, rerum labore fuga esse.",
+  "icon": "bx-check-shield"
+}]
